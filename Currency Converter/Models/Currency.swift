@@ -8,18 +8,25 @@
 
 import Foundation
 
-struct Currency {
+class Currency {
   
-    var symbol: String
-    var value: Float
-    
-    var description: String {
-        return "Currency: { symbol: \(symbol), value: \(value) }"
+    let symbol: String
+    let value: Float
+    var quantity: Float = 1
+    var accumulatedValue: Float {
+        return value * quantity
     }
     
     init(dictionary: (key: String, value: Float)) {
         
         self.symbol = dictionary.key
         self.value = dictionary.value
+    }
+}
+
+extension Currency : CustomStringConvertible {
+
+    var description: String {
+        return "Currency: { symbol: \(symbol), value: \(value) }"
     }
 }

@@ -13,6 +13,10 @@ enum LocalizableString: String {
     //Common
     case title = "Currency Converter"
     
+    //Errors
+    case parsingError = "unexpected error occurred, please try again later"
+    case networkingError = "verify your internet connection and try again later"
+    
     var string: String {
         return NSLocalizedString(rawValue, comment: "")
     }

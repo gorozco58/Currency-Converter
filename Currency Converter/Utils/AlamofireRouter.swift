@@ -13,6 +13,16 @@ enum CommonError : Error {
 
     case parsingError
     case networkError
+    
+    var localizedDescription: String {
+    
+        switch self {
+        case .parsingError:
+            return LocalizableString.parsingError.string
+        case .networkError:
+            return LocalizableString.networkingError.string
+        }
+    }
 }
 
 enum AlamofireRouter : URLRequestConvertible {
