@@ -9,6 +9,12 @@
 import Foundation
 import Alamofire
 
+enum CommonError : Error {
+
+    case parsingError
+    case networkError
+}
+
 enum AlamofireRouter : URLRequestConvertible {
 
     static let baseURLString = "http://api.fixer.io/"
@@ -18,14 +24,14 @@ enum AlamofireRouter : URLRequestConvertible {
     var method: HTTPMethod {
         switch self {
         case .getCurrencies:
-            return .post
+            return .get
         }
     }
     
     var path: String {
         switch self {
         case .getCurrencies:
-            return "/latest"
+            return "latest"
         }
     }
     

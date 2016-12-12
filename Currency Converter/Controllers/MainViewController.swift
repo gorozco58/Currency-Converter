@@ -10,6 +10,8 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    fileprivate let base = Currency(dictionary: (key: "USD", value: 1))
+    
     init() {
         
         super.init(nibName: nil, bundle: nil)
@@ -21,9 +23,18 @@ class MainViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        CurrencyNetworking.getCurrencies(base) { result in
+        
+            switch result {
+            case .success(let currencies):
+                print(currencies)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
