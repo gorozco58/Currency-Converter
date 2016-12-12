@@ -16,6 +16,9 @@ class Currency {
     var accumulatedValue: Float {
         return value * quantity
     }
+    var inversed: Float {
+        return quantity / value
+    }
     
     init(dictionary: (key: String, value: Float)) {
         

@@ -84,7 +84,7 @@ extension MainViewController {
     fileprivate func reloadData() {
     
         currencies.enumerated().forEach { (index, currency) in
-            self.rateLabels[index].text = "\(currency.symbol): \(currency.accumulatedValue)"
+            self.rateLabels[index].text = "\(currency.symbol): \(currency.accumulatedValue) -- Inversed: \(currency.inversed)"
         }
     }
 }
