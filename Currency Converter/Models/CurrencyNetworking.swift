@@ -9,10 +9,18 @@
 import Foundation
 import Alamofire
 
-struct CurrencyNetworking {
+protocol CurrencyNetworkingType {
+  
+    static func getCurrencies(base: Currency, completion: () -> Void)
+}
+
+struct CurrencyNetworking : CurrencyNetworkingType {
     
-    static func getCurrencies(completion: () -> Void) {
+    static func getCurrencies(base: Currency, completion: () -> Void) {
     
-        
+        Alamofire.request(AlamofireRouter.getCurrencies(base: base)).response { response in
+            
+            print(response)
+        }
     }
 }

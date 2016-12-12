@@ -18,6 +18,8 @@
 		88EB936B1DFF1E43007A37D4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB93691DFF1E43007A37D4 /* MainViewController.swift */; };
 		88EB936C1DFF1E43007A37D4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88EB936A1DFF1E43007A37D4 /* MainViewController.xib */; };
 		88EB936F1DFF1FD1007A37D4 /* CurrencyNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB936E1DFF1FD1007A37D4 /* CurrencyNetworking.swift */; };
+		88EB93711DFF2321007A37D4 /* AlamofireRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB93701DFF2321007A37D4 /* AlamofireRouter.swift */; };
+		88EB93731DFF244A007A37D4 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB93721DFF244A007A37D4 /* Currency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		88EB93691DFF1E43007A37D4 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		88EB936A1DFF1E43007A37D4 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		88EB936E1DFF1FD1007A37D4 /* CurrencyNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyNetworking.swift; sourceTree = "<group>"; };
+		88EB93701DFF2321007A37D4 /* AlamofireRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireRouter.swift; sourceTree = "<group>"; };
+		88EB93721DFF244A007A37D4 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		D7DC88AFAB702C0299AA8D0A /* Pods_Currency_Converter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Currency_Converter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -152,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				88EB93661DFF1E1D007A37D4 /* LocalizableString.swift */,
+				88EB93701DFF2321007A37D4 /* AlamofireRouter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				88EB936E1DFF1FD1007A37D4 /* CurrencyNetworking.swift */,
+				88EB93721DFF244A007A37D4 /* Currency.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -368,10 +374,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88EB93731DFF244A007A37D4 /* Currency.swift in Sources */,
 				88EB936B1DFF1E43007A37D4 /* MainViewController.swift in Sources */,
 				88EB93321DFF1C40007A37D4 /* AppDelegate.swift in Sources */,
 				88EB936F1DFF1FD1007A37D4 /* CurrencyNetworking.swift in Sources */,
 				88EB93671DFF1E1D007A37D4 /* LocalizableString.swift in Sources */,
+				88EB93711DFF2321007A37D4 /* AlamofireRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
