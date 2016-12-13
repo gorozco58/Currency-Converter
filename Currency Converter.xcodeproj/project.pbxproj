@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		21E604FEF169E03DE23A9E4F /* Pods_Currency_Converter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DC88AFAB702C0299AA8D0A /* Pods_Currency_Converter.framework */; };
+		88D50DC21E001A5B00711291 /* ChartsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D50DC11E001A5B00711291 /* ChartsFactory.swift */; };
+		88D50DC51E0020CE00711291 /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D50DC31E0020CE00711291 /* BalloonMarker.swift */; };
+		88D50DC61E0020CE00711291 /* XYMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D50DC41E0020CE00711291 /* XYMarkerView.swift */; };
+		88D50DC81E0020FC00711291 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D50DC71E0020FC00711291 /* ColorHelper.swift */; };
 		88EB93321DFF1C40007A37D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB93311DFF1C40007A37D4 /* AppDelegate.swift */; };
 		88EB93391DFF1C40007A37D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88EB93381DFF1C40007A37D4 /* Assets.xcassets */; };
 		88EB933C1DFF1C40007A37D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EB933A1DFF1C40007A37D4 /* LaunchScreen.storyboard */; };
@@ -42,6 +46,10 @@
 /* Begin PBXFileReference section */
 		4D267D57ADABDCC603FC4FB1 /* Pods-Currency Converter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currency Converter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Currency Converter/Pods-Currency Converter.debug.xcconfig"; sourceTree = "<group>"; };
 		88A195DCC653F07C8C26922F /* Pods-Currency Converter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currency Converter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Currency Converter/Pods-Currency Converter.release.xcconfig"; sourceTree = "<group>"; };
+		88D50DC11E001A5B00711291 /* ChartsFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsFactory.swift; sourceTree = "<group>"; };
+		88D50DC31E0020CE00711291 /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
+		88D50DC41E0020CE00711291 /* XYMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYMarkerView.swift; sourceTree = "<group>"; };
+		88D50DC71E0020FC00711291 /* ColorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
 		88EB932E1DFF1C40007A37D4 /* Currency Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Currency Converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88EB93311DFF1C40007A37D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88EB93381DFF1C40007A37D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -155,8 +163,12 @@
 		88EB93651DFF1E1D007A37D4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				88D50DC31E0020CE00711291 /* BalloonMarker.swift */,
+				88D50DC41E0020CE00711291 /* XYMarkerView.swift */,
 				88EB93661DFF1E1D007A37D4 /* LocalizableString.swift */,
 				88EB93701DFF2321007A37D4 /* AlamofireRouter.swift */,
+				88D50DC11E001A5B00711291 /* ChartsFactory.swift */,
+				88D50DC71E0020FC00711291 /* ColorHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -375,11 +387,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				88EB93731DFF244A007A37D4 /* Currency.swift in Sources */,
+				88D50DC81E0020FC00711291 /* ColorHelper.swift in Sources */,
 				88EB936B1DFF1E43007A37D4 /* MainViewController.swift in Sources */,
 				88EB93321DFF1C40007A37D4 /* AppDelegate.swift in Sources */,
 				88EB936F1DFF1FD1007A37D4 /* CurrencyNetworking.swift in Sources */,
+				88D50DC21E001A5B00711291 /* ChartsFactory.swift in Sources */,
+				88D50DC61E0020CE00711291 /* XYMarkerView.swift in Sources */,
 				88EB93671DFF1E1D007A37D4 /* LocalizableString.swift in Sources */,
 				88EB93711DFF2321007A37D4 /* AlamofireRouter.swift in Sources */,
+				88D50DC51E0020CE00711291 /* BalloonMarker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
