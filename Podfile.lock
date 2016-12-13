@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.2.0)
+  - Charts (3.0.1):
+    - Charts/Core (= 3.0.1)
+  - Charts/Core (3.0.1)
   - MarqueeLabel (3.0.1):
     - MarqueeLabel/ObjC (= 3.0.1)
   - MarqueeLabel/ObjC (3.0.1)
@@ -7,14 +10,16 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.2)
+  - Charts (~> 3.0)
   - MarqueeLabel (~> 3.0)
   - SVProgressHUD (~> 2.1)
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   MarqueeLabel: 80ba85d2b76a9f5fa6c13de337db80bcd94feb1d
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: e1ec2f04ba6829981f9d3b36a9bd83a1cdf64ece
+PODFILE CHECKSUM: 3810e6c92d0b26fbb3d7f8fa8e9d5a501c50f0f1
 
 COCOAPODS: 1.1.1

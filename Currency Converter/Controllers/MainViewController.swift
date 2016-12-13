@@ -9,11 +9,13 @@
 import UIKit
 import SVProgressHUD
 import MarqueeLabel
+import Charts
 
 class MainViewController: UIViewController {
 
     //MARK: - @IBOutlet
     @IBOutlet fileprivate weak var rateLabel: MarqueeLabel!
+    @IBOutlet fileprivate weak var barChartView: BarChartView!
     
     //MARK: - Private vars
     fileprivate var base: Currency

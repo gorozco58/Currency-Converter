@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Currency_Converter" customModuleProvider="target">
             <connections>
+                <outlet property="barChartView" destination="Qbq-9q-7zJ" id="5yy-XF-nB7"/>
                 <outlet property="rateLabel" destination="58A-gE-Lil" id="Sjx-5N-mIj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -41,17 +42,25 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qbq-9q-7zJ" customClass="BarChartView" customModule="Charts">
+                    <rect key="frame" x="0.0" y="228" width="375" height="409"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
-            <color key="backgroundColor" red="0.0" green="1" blue="0.82118567836649925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.59960327980111527" green="0.8666803585686309" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="Qbq-9q-7zJ" firstAttribute="top" secondItem="58A-gE-Lil" secondAttribute="bottom" constant="20.5" id="3Yq-0e-JtW"/>
                 <constraint firstItem="58A-gE-Lil" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="4D2-dE-djP"/>
+                <constraint firstAttribute="bottom" secondItem="Qbq-9q-7zJ" secondAttribute="bottom" constant="30" id="53W-V2-cCt"/>
                 <constraint firstItem="NKD-sf-6yt" firstAttribute="top" secondItem="6Ta-h8-yfg" secondAttribute="bottom" constant="19" id="LHS-n7-Klp"/>
                 <constraint firstItem="58A-gE-Lil" firstAttribute="top" secondItem="NKD-sf-6yt" secondAttribute="bottom" constant="24" id="Nbr-aX-55f"/>
                 <constraint firstItem="6Ta-h8-yfg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZbQ-wC-nDm"/>
                 <constraint firstItem="6Ta-h8-yfg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="93" id="dIQ-FN-Xak"/>
+                <constraint firstAttribute="trailing" secondItem="Qbq-9q-7zJ" secondAttribute="trailing" id="lES-Rd-Rrg"/>
                 <constraint firstItem="NKD-sf-6yt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="72" id="m5z-aj-lDC"/>
                 <constraint firstAttribute="trailing" secondItem="58A-gE-Lil" secondAttribute="trailing" constant="16" id="nNq-Og-g5r"/>
                 <constraint firstAttribute="trailing" secondItem="NKD-sf-6yt" secondAttribute="trailing" constant="73" id="sfR-JO-nSI"/>
+                <constraint firstItem="Qbq-9q-7zJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uRG-u9-jQQ"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <point key="canvasLocation" x="34.5" y="53.5"/>
