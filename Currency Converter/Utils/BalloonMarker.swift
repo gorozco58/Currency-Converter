@@ -1,34 +1,31 @@
 //
 //  BalloonMarker.swift
-//  ChartsDemo
+//  Currency Converter
 //
-//  Copyright 2015 Daniel Cohen Gindi & Philipp Jahoda
-//  A port of MPAndroidChart for iOS
-//  Licensed under Apache License 2.0
-//
-//  https://github.com/danielgindi/Charts
+//  Created by Giovanny Orozco on 12/13/16.
+//  Copyright © 2016 Giovanny Orozco. All rights reserved.
 //
 
 import Foundation
 import Charts
 
 
-open class BalloonMarker: MarkerImage
-{
-    open var color: UIColor?
-    open var arrowSize = CGSize(width: 15, height: 11)
-    open var font: UIFont?
-    open var textColor: UIColor?
-    open var insets = UIEdgeInsets()
-    open var minimumSize = CGSize()
+class BalloonMarker: MarkerImage {
+    
+    var color: UIColor?
+    var arrowSize = CGSize(width: 15, height: 11)
+    var font: UIFont?
+    var textColor: UIColor?
+    var insets = UIEdgeInsets()
+    var minimumSize = CGSize()
     
     fileprivate var labelns: NSString?
     fileprivate var _labelSize: CGSize = CGSize()
     fileprivate var _paragraphStyle: NSMutableParagraphStyle?
     fileprivate var _drawAttributes = [String : AnyObject]()
     
-    public init(color: UIColor, font: UIFont, textColor: UIColor, insets: UIEdgeInsets)
-    {
+    public init(color: UIColor, font: UIFont, textColor: UIColor, insets: UIEdgeInsets) {
+        
         super.init()
         
         self.color = color
@@ -40,19 +37,19 @@ open class BalloonMarker: MarkerImage
         _paragraphStyle?.alignment = .center
     }
     
-    open override func offsetForDrawing(atPoint point: CGPoint) -> CGPoint
-    {
+    override func offsetForDrawing(atPoint point: CGPoint) -> CGPoint {
+        
         let size = self.size
         var point = point
         point.x -= size.width / 2.0
         point.y -= size.height
+        
         return super.offsetForDrawing(atPoint: point)
     }
     
-    open override func draw(context: CGContext, point: CGPoint)
-    {
-        if labelns == nil
-        {
+    override func draw(context: CGContext, point: CGPoint) {
+        
+        if labelns == nil {
             return
         }
         
@@ -69,8 +66,8 @@ open class BalloonMarker: MarkerImage
         
         context.saveGState()
         
-        if let color = color
-        {
+        if let color = color {
+            
             context.setFillColor(color.cgColor)
             context.beginPath()
             context.move(to: CGPoint(
@@ -112,13 +109,13 @@ open class BalloonMarker: MarkerImage
         context.restoreGState()
     }
     
-    open override func refreshContent(entry: ChartDataEntry, highlight: Highlight)
-    {
+    override func refreshContent(entry: ChartDataEntry, highlight: Highlight) {
+        
         setLabel(String(entry.y))
     }
     
-    open func setLabel(_ label: String)
-    {
+    func setLabel(_ label: String) {
+        
         labelns = label as NSString
         
         _drawAttributes.removeAll()
