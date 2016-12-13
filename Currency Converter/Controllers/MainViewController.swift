@@ -8,11 +8,12 @@
 
 import UIKit
 import SVProgressHUD
+import MarqueeLabel
 
 class MainViewController: UIViewController {
 
     //MARK: - @IBOutlet
-    @IBOutlet fileprivate var rateLabels: [UILabel]!
+    @IBOutlet fileprivate weak var rateLabel: MarqueeLabel!
     
     //MARK: - Private vars
     fileprivate var base: Currency
@@ -83,9 +84,12 @@ extension MainViewController {
 
     fileprivate func reloadData() {
     
-        currencies.enumerated().forEach { (index, currency) in
-            self.rateLabels[index].text = "\(currency.symbol): \(currency.accumulatedValue) -- Inversed: \(currency.inversed)"
+        var rates = ""
+        currencies.forEach { currency in
+            rates += "- \(currency.symbol): \(currency.accumulatedValue) -"
         }
+        
+        rateLabel.text = rates
     }
 }
 
