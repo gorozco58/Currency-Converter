@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Currency_Converter" customModuleProvider="target">
             <connections>
                 <outlet property="barChartView" destination="Qbq-9q-7zJ" id="5yy-XF-nB7"/>
+                <outlet property="baseTextField" destination="NKD-sf-6yt" id="5CF-oc-i8T"/>
                 <outlet property="rateLabel" destination="58A-gE-Lil" id="Sjx-5N-mIj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -41,6 +42,11 @@
                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="fadeLength">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qbq-9q-7zJ" customClass="BarChartView" customModule="Charts">
                     <rect key="frame" x="0.0" y="228" width="375" height="409"/>

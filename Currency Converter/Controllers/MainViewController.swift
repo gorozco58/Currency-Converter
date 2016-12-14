@@ -13,15 +13,16 @@ import Charts
 
 class MainViewController: UIViewController {
 
-    //MARK: - @IBOutlet
+    //MARK: @IBOutlet
+    @IBOutlet fileprivate weak var baseTextField: UITextField!
     @IBOutlet fileprivate weak var rateLabel: MarqueeLabel!
     @IBOutlet fileprivate weak var barChartView: BarChartView!
     
-    //MARK: - Private vars
+    //MARK: Private vars
     fileprivate var base: Currency
     fileprivate var currencies: [Currency] = []
     
-    //MARK: - Life cycle
+    //MARK: Life cycle
     init(base: Currency) {
         
         self.base = base
@@ -36,8 +37,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        baseTextField.text = String(base.value)
         ChartsFactory.setup(barChartView: barChartView, delegate: self)
-
         SVProgressHUD.show()
         
         CurrencyNetworking.getCurrencies(base) { [weak self] result in
@@ -70,7 +71,7 @@ extension MainViewController : UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         let newString = NSString(string: textField.text!).replacingCharacters(in: range, with: string)
-        return Float(newString) != nil
+        return Float(newString) != nil || newString.isEmpty
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -97,6 +98,7 @@ extension MainViewController {
         
         let values = currencies.enumerated().map { BarChartDataEntry(x: Double($0), y: Double($1.inversed)) }
         ChartsFactory.set(values: values, to: barChartView)
+        barChartView.animate(yAxisDuration: 2)
     }
 }
 
@@ -106,7 +108,7 @@ extension MainViewController : XYMarkerViewDelegate {
     func textForMarkerView(_ view: XYMarkerView, didSelectAtIndex index: Int) -> String {
         
         let currency = currencies[index]
-        return "\(base.symbol): \(currency.value)"
+        return "\(base.symbol): \(currency.accumulatedValue)"
     }
 }
 
