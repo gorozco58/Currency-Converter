@@ -21,9 +21,4 @@ enum LocalizableString: String {
     var string: String {
         return NSLocalizedString(rawValue, comment: "")
     }
-    
-    func localizedStringWithArguments(arguments: [CVarArg]) -> String {
-        
-        return String(format: string, arguments: arguments)
-    }
 }
