@@ -70,6 +70,28 @@ struct ChartsFactory {
         barChartView.marker = marker
         barChartView.delegate = delegate
     }
+    
+    static func set(values: [ChartDataEntry], to barChartView: BarChartView) {
+    
+        if let data = barChartView.data, data.dataSetCount > 0 {
+            
+            if let set1 = data.dataSets[0] as? BarChartDataSet {
+                set1.values = values
+                data.notifyDataChanged()
+                barChartView.notifyDataSetChanged()
+            }
+        } else {
+            
+            let set1 = BarChartDataSet(values: values, label: LocalizableString.currencies.string)
+            set1.setColors(ChartColorTemplates.material(), alpha: 1)
+            
+            let data = BarChartData(dataSets: [set1])
+            data.setValueFont(UIFont.helvetica(size: 10))
+            data.barWidth = 0.9
+            
+            barChartView.data = data
+        }
+    }
 }
 
 protocol CurrencyFormatterDelegate : class {

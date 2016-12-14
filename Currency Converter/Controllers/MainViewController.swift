@@ -38,8 +38,12 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         ChartsFactory.setup(barChartView: barChartView, delegate: self)
 
+        SVProgressHUD.show()
+        
         CurrencyNetworking.getCurrencies(base) { [weak self] result in
         
+            SVProgressHUD.dismiss()
+            
             switch result {
             case .success(let currencies):
                 
@@ -88,42 +92,11 @@ extension MainViewController : UITextFieldDelegate {
 extension MainViewController {
 
     fileprivate func reloadData() {
-    
-        var rates = ""
-        currencies.forEach { currency in
-            rates += "- \(currency.symbol): \(currency.accumulatedValue) -"
-        }
         
-        rateLabel.text = rates
-        updateChartData()
-    }
-    
-    fileprivate func updateChartData() {
-    
-        var values: [BarChartDataEntry] = []
+        rateLabel.text = currencies.reduce("") { $0 + "- \($1.symbol): \($1.accumulatedValue) -" }
         
-        currencies.enumerated().forEach { (index, currency) in
-            values.append(BarChartDataEntry(x: Double(index), y: Double(currency.inversed)))
-        }
-        
-        if let data = barChartView.data, data.dataSetCount > 0 {
-            
-            if let set1 = data.dataSets[0] as? BarChartDataSet {
-                set1.values = values
-                data.notifyDataChanged()
-                barChartView.notifyDataSetChanged()
-            }
-        } else {
-            
-            let set1 = BarChartDataSet(values: values, label: LocalizableString.currencies.string)
-            set1.setColors(ChartColorTemplates.material(), alpha: 1)
-            
-            let data = BarChartData(dataSets: [set1])
-            data.setValueFont(UIFont.helvetica(size: 10))
-            data.barWidth = 0.9
-            
-            barChartView.data = data
-        }
+        let values = currencies.enumerated().map { BarChartDataEntry(x: Double($0), y: Double($1.inversed)) }
+        ChartsFactory.set(values: values, to: barChartView)
     }
 }
 

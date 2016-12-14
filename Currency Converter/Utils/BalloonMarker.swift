@@ -20,9 +20,9 @@ class BalloonMarker: MarkerImage {
     var minimumSize = CGSize()
     
     fileprivate var labelns: NSString?
-    fileprivate var _labelSize: CGSize = CGSize()
-    fileprivate var _paragraphStyle: NSMutableParagraphStyle?
-    fileprivate var _drawAttributes = [String : AnyObject]()
+    fileprivate var labelSize = CGSize()
+    fileprivate var paragraphStyle: NSMutableParagraphStyle?
+    fileprivate var drawAttributes = [String : AnyObject]()
     
     public init(color: UIColor, font: UIFont, textColor: UIColor, insets: UIEdgeInsets) {
         
@@ -33,8 +33,8 @@ class BalloonMarker: MarkerImage {
         self.textColor = textColor
         self.insets = insets
         
-        _paragraphStyle = NSParagraphStyle.default.mutableCopy() as? NSMutableParagraphStyle
-        _paragraphStyle?.alignment = .center
+        paragraphStyle = NSParagraphStyle.default.mutableCopy() as? NSMutableParagraphStyle
+        paragraphStyle?.alignment = .center
     }
     
     override func offsetForDrawing(atPoint point: CGPoint) -> CGPoint {
@@ -102,7 +102,7 @@ class BalloonMarker: MarkerImage {
         
         UIGraphicsPushContext(context)
         
-        labelns?.draw(in: rect, withAttributes: _drawAttributes)
+        labelns?.draw(in: rect, withAttributes: drawAttributes)
         
         UIGraphicsPopContext()
         
@@ -118,16 +118,16 @@ class BalloonMarker: MarkerImage {
         
         labelns = label as NSString
         
-        _drawAttributes.removeAll()
-        _drawAttributes[NSFontAttributeName] = self.font
-        _drawAttributes[NSParagraphStyleAttributeName] = _paragraphStyle
-        _drawAttributes[NSForegroundColorAttributeName] = self.textColor
+        drawAttributes.removeAll()
+        drawAttributes[NSFontAttributeName] = self.font
+        drawAttributes[NSParagraphStyleAttributeName] = paragraphStyle
+        drawAttributes[NSForegroundColorAttributeName] = self.textColor
         
-        _labelSize = labelns?.size(attributes: _drawAttributes) ?? CGSize.zero
+        labelSize = labelns?.size(attributes: drawAttributes) ?? CGSize.zero
         
         var size = CGSize()
-        size.width = _labelSize.width + self.insets.left + self.insets.right
-        size.height = _labelSize.height + self.insets.top + self.insets.bottom
+        size.width = labelSize.width + self.insets.left + self.insets.right
+        size.height = labelSize.height + self.insets.top + self.insets.bottom
         size.width = max(minimumSize.width, size.width)
         size.height = max(minimumSize.height, size.height)
         self.size = size
