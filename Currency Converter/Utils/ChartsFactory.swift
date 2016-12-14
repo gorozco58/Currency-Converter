@@ -10,8 +10,8 @@ import Foundation
 import Charts
 
 struct ChartsFactory {
-
-    static func setup(barChartView: BarChartView) {
+    
+    static func setup(barChartView: BarChartView, delegate: CurrencyFormatterDelegate & XYMarkerViewDelegate & ChartViewDelegate) {
     
         barChartView.chartDescription?.enabled = false
         barChartView.drawGridBackgroundEnabled = false
@@ -23,13 +23,16 @@ struct ChartsFactory {
         barChartView.maxVisibleCount = 60
         barChartView.rightAxis.enabled = false
         
+        let currencyFormatter = CurrencyFormatter()
+        currencyFormatter.delegate = delegate
+        
         let xAxis = barChartView.xAxis
         xAxis.labelPosition = .bottom
         xAxis.labelFont = UIFont.systemFont(ofSize: 12)
         xAxis.drawGridLinesEnabled = false
         xAxis.granularity = 1.0
         xAxis.labelCount = 4
-        xAxis.valueFormatter = DefaultAxisValueFormatter()
+        xAxis.valueFormatter = currencyFormatter
         
         let leftAxisFormatter = NumberFormatter()
         leftAxisFormatter.minimumFractionDigits = 0
@@ -63,6 +66,27 @@ struct ChartsFactory {
         
         marker.chartView = barChartView
         marker.minimumSize = CGSize(width: 80.0, height: 40.0)
+        marker.delegate = delegate
         barChartView.marker = marker
+        barChartView.delegate = delegate
+    }
+}
+
+protocol CurrencyFormatterDelegate : class {
+    
+    func currencyFormater(_ formatter: CurrencyFormatter, stringAtIndex index: Int) -> String
+}
+
+class CurrencyFormatter : NSObject, IAxisValueFormatter {
+
+    weak var delegate: CurrencyFormatterDelegate?
+    
+    func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+        
+        if let delegate = delegate {
+            return delegate.currencyFormater(self, stringAtIndex: Int(value))
+        }
+        
+        return ""
     }
 }

@@ -9,10 +9,17 @@
 import Foundation
 import Charts
 
+protocol XYMarkerViewDelegate : class {
+
+    func textForMarkerView(_ view: XYMarkerView, didSelectAtIndex index: Int) -> String
+}
+
 class XYMarkerView: BalloonMarker {
     
-    var xAxisValueFormatter: IAxisValueFormatter?
     fileprivate var yFormatter = NumberFormatter()
+    
+    var xAxisValueFormatter: IAxisValueFormatter?
+    weak var delegate: XYMarkerViewDelegate?
     
     init(color: UIColor, font: UIFont, textColor: UIColor, insets: UIEdgeInsets, xAxisValueFormatter: IAxisValueFormatter) {
         
@@ -24,6 +31,8 @@ class XYMarkerView: BalloonMarker {
     
     override func refreshContent(entry: ChartDataEntry, highlight: Highlight) {
         
-        setLabel("x: " + xAxisValueFormatter!.stringForValue(entry.x, axis: nil) + ", y: " + yFormatter.string(from: NSNumber(floatLiteral: entry.y))!)
+        if let delegate = delegate {
+            setLabel(delegate.textForMarkerView(self, didSelectAtIndex: Int(entry.x)))
+        }
     }
 }

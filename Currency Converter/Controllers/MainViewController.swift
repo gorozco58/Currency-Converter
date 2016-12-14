@@ -36,9 +36,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        ChartsFactory.setup(barChartView: barChartView)
-        barChartView.delegate = self
+        ChartsFactory.setup(barChartView: barChartView, delegate: self)
 
         CurrencyNetworking.getCurrencies(base) { [weak self] result in
         
@@ -77,10 +75,12 @@ extension MainViewController : UITextFieldDelegate {
             base.quantity = quantity
             currencies.forEach { $0.quantity = quantity }
             reloadData()
+            
+            textField.resignFirstResponder()
+            return true
         }
         
-        textField.resignFirstResponder()
-        return true
+        return false
     }
 }
 
@@ -127,11 +127,31 @@ extension MainViewController {
     }
 }
 
+//MARK: - XYMarkerViewDelegate
+extension MainViewController : XYMarkerViewDelegate {
+
+    func textForMarkerView(_ view: XYMarkerView, didSelectAtIndex index: Int) -> String {
+        
+        let currency = currencies[index]
+        return "\(currency.symbol): \(currency.value)"
+    }
+}
+
 //MARK: - ChartViewDelegate
 extension MainViewController : ChartViewDelegate {
 
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
         print("chartValueSelected")
+    }
+}
+
+//MARK: - CurrencyFormatterDelegate
+extension MainViewController : CurrencyFormatterDelegate {
+
+    func currencyFormater(_ formatter: CurrencyFormatter, stringAtIndex index: Int) -> String {
+        
+        let currency = currencies[index]
+        return currency.symbol
     }
 }
 
