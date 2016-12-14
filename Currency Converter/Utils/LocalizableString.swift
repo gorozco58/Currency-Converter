@@ -12,6 +12,7 @@ enum LocalizableString: String {
     
     //Common
     case title = "Currency Converter"
+    case currencies = "Currencies"
     
     //Errors
     case parsingError = "unexpected error occurred, please try again later"

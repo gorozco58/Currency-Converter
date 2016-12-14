@@ -8,3 +8,8 @@
 
 //MARK: - Common
 "Currency Converter" = "Currency Converter";
+"Currencies" = "Currencies"; 
+
+//MARK: - Errors
+"unexpected error occurred, please try again later" = "unexpected error occurred, please try again later";
+"verify your internet connection and try again later" = "verify your internet connection and try again later";
