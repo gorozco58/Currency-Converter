@@ -14,9 +14,9 @@ import Charts
 class MainViewController: UIViewController {
 
     //MARK: @IBOutlet
-    @IBOutlet fileprivate weak var baseTextField: UITextField!
-    @IBOutlet fileprivate weak var rateLabel: MarqueeLabel!
-    @IBOutlet fileprivate weak var barChartView: BarChartView!
+    @IBOutlet weak var baseTextField: UITextField!
+    @IBOutlet weak var rateLabel: MarqueeLabel!
+    @IBOutlet weak var barChartView: BarChartView!
     
     //MARK: Private vars
     fileprivate var base: Currency
