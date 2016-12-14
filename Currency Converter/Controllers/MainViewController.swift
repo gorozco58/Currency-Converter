@@ -133,7 +133,7 @@ extension MainViewController : XYMarkerViewDelegate {
     func textForMarkerView(_ view: XYMarkerView, didSelectAtIndex index: Int) -> String {
         
         let currency = currencies[index]
-        return "\(currency.symbol): \(currency.value)"
+        return "\(base.symbol): \(currency.value)"
     }
 }
 
