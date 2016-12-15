@@ -28,7 +28,7 @@ class CurrencyChartViewUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testChartViewMarker() {
+    func testChartView() {
         
         let application = XCUIApplication()
         let query = application.otherElements.containing(.navigationBar, identifier:"Currency Converter")
@@ -36,5 +36,28 @@ class CurrencyChartViewUITests: XCTestCase {
         chartViews.element.tap()
         
         XCTAssertEqual(chartViews.count, 1)
+    }
+    
+    func testCurrencyTextField() {
+    
+        let input = "2"
+        let app = XCUIApplication()
+        let query = app.otherElements.containing(.navigationBar, identifier:"Currency Converter")
+        let textField = query.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textField).element
+        textField.tap()
+        
+        let initialValue = textField.value as? String
+        let deleteKey = app.keyboards.keys["delete"]
+        deleteKey.tap()
+        deleteKey.tap()
+        deleteKey.tap()
+        app.keyboards.keys[input].tap()
+        app.buttons["Done"].tap()
+        
+        let finalValue = textField.value as? String
+        
+        XCTAssertNotNil(initialValue)
+        XCTAssertNotNil(finalValue)
+        XCTAssertNotEqual(initialValue, finalValue)
     }
 }

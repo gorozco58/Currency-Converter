@@ -82,10 +82,9 @@ extension MainViewController : UITextFieldDelegate {
             reloadData()
             
             textField.resignFirstResponder()
-            return true
         }
         
-        return false
+        return true
     }
 }
 
