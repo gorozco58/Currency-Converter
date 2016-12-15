@@ -105,10 +105,7 @@ class CurrencyFormatter : NSObject, IAxisValueFormatter {
     
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
         
-        if let delegate = delegate {
-            return delegate.currencyFormater(self, stringAtIndex: Int(value))
-        }
-        
-        return ""
+        guard let delegate = delegate else { return "" }
+        return delegate.currencyFormater(self, stringAtIndex: Int(value))
     }
 }
