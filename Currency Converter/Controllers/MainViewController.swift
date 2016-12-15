@@ -19,8 +19,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var barChartView: BarChartView!
     
     //MARK: Private vars
-    fileprivate var base: Currency
-    fileprivate var currencies: [Currency] = []
+    private(set) var base: Currency
+    private(set) var currencies: [Currency] = []
     
     //MARK: Life cycle
     init(base: Currency) {
@@ -39,10 +39,22 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         baseTextField.text = String(base.value)
         ChartsFactory.setup(barChartView: barChartView, delegate: self)
+        loadCurrencies()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    //MARK: - Utils
+    func loadCurrencies() {
+    
         SVProgressHUD.show()
         
         CurrencyNetworking.getCurrencies(base) { [weak self] result in
-        
+            
             SVProgressHUD.dismiss()
             
             switch result {
@@ -53,15 +65,22 @@ class MainViewController: UIViewController {
                 
             case .failure(let error):
                 
-                SVProgressHUD.showError(withStatus: error.localizedDescription)
+                self?.show(error: error)
             }
         }
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    func reloadData() {
         
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
+        rateLabel.text = currencies.reduce("") { $0 + "- \($1.symbol): \($1.accumulatedValue) -" }
+        
+        let values = currencies.enumerated().map { BarChartDataEntry(x: Double($0), y: Double($1.inversed)) }
+        ChartsFactory.set(values: values, to: barChartView)
+        barChartView.animate(yAxisDuration: 2)
+    }
+    
+    func show(error: Error) {
+        SVProgressHUD.showError(withStatus: error.localizedDescription)
     }
 }
 
@@ -85,19 +104,6 @@ extension MainViewController : UITextFieldDelegate {
         }
         
         return true
-    }
-}
-
-//MARK: - Private
-extension MainViewController {
-
-    fileprivate func reloadData() {
-        
-        rateLabel.text = currencies.reduce("") { $0 + "- \($1.symbol): \($1.accumulatedValue) -" }
-        
-        let values = currencies.enumerated().map { BarChartDataEntry(x: Double($0), y: Double($1.inversed)) }
-        ChartsFactory.set(values: values, to: barChartView)
-        barChartView.animate(yAxisDuration: 2)
     }
 }
 

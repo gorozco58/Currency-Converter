@@ -3,6 +3,7 @@ use_frameworks!
 
 def multiple_targets
     
+pod 'MarqueeLabel', '~> 3.0'
 pod 'Alamofire', '~> 4.2'
     
 end
@@ -12,7 +13,6 @@ target 'Currency Converter' do
 multiple_targets
 
 pod 'SVProgressHUD', '~> 2.1'
-pod 'MarqueeLabel', '~> 3.0'
 pod 'Charts', '~> 3.0'
  
 end

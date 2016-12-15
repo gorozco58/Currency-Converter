@@ -11,6 +11,7 @@
 		21E604FEF169E03DE23A9E4F /* Pods_Currency_Converter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DC88AFAB702C0299AA8D0A /* Pods_Currency_Converter.framework */; };
 		8857D9D11E00C2D500237897 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857D9D01E00C2D500237897 /* FontHelper.swift */; };
 		886376101E0186ED00E9F9F3 /* CurrencyChartViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8863760F1E0186ED00E9F9F3 /* CurrencyChartViewUITests.swift */; };
+		8870FDF51E034211004F2124 /* MainViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870FDF41E034211004F2124 /* MainViewControllerTestCase.swift */; };
 		88D50DC21E001A5B00711291 /* ChartsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D50DC11E001A5B00711291 /* ChartsFactory.swift */; };
 		88D50DC51E0020CE00711291 /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D50DC31E0020CE00711291 /* BalloonMarker.swift */; };
 		88D50DC61E0020CE00711291 /* XYMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D50DC41E0020CE00711291 /* XYMarkerView.swift */; };
@@ -50,6 +51,7 @@
 		5F1453128AE5B16C6587E70C /* Pods-Currency ConverterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currency ConverterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Currency ConverterTests/Pods-Currency ConverterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8857D9D01E00C2D500237897 /* FontHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
 		8863760F1E0186ED00E9F9F3 /* CurrencyChartViewUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyChartViewUITests.swift; sourceTree = "<group>"; };
+		8870FDF41E034211004F2124 /* MainViewControllerTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewControllerTestCase.swift; sourceTree = "<group>"; };
 		88A195DCC653F07C8C26922F /* Pods-Currency Converter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currency Converter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Currency Converter/Pods-Currency Converter.release.xcconfig"; sourceTree = "<group>"; };
 		88D50DC11E001A5B00711291 /* ChartsFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsFactory.swift; sourceTree = "<group>"; };
 		88D50DC31E0020CE00711291 /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				88FFB7A21E01787700248671 /* CurrencyModelsTestCase.swift */,
+				8870FDF41E034211004F2124 /* MainViewControllerTestCase.swift */,
 				88EB93481DFF1C40007A37D4 /* Info.plist */,
 			);
 			path = "Currency ConverterTests";
@@ -459,6 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8870FDF51E034211004F2124 /* MainViewControllerTestCase.swift in Sources */,
 				88FFB7A31E01787700248671 /* CurrencyModelsTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,7 +601,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4D267D57ADABDCC603FC4FB1 /* Pods-Currency Converter.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Currency Converter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -611,7 +615,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 88A195DCC653F07C8C26922F /* Pods-Currency Converter.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Currency Converter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -625,7 +629,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5F1453128AE5B16C6587E70C /* Pods-Currency ConverterTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Currency ConverterTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -640,7 +644,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 36E57BC47E710E441D65980A /* Pods-Currency ConverterTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Currency ConverterTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

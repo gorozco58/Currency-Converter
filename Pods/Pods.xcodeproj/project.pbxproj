@@ -25,6 +25,7 @@
 		152409899B88199697082E9D3104502C /* HorizontalBarHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B751082548F2775415CBF83514DC77 /* HorizontalBarHighlighter.swift */; };
 		15C2B48224260E50C912E9A5B3C95E5D /* LineChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020629122FEED04DEE8106C79F9F3171 /* LineChartRenderer.swift */; };
 		16B57D23AA767CA20ABF5C59633E5476 /* IndexAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43938A52C8217715BDC45C6D7779ABCE /* IndexAxisValueFormatter.swift */; };
+		190F587CC0BDB3952E997BCCF184C197 /* Pods-Currency ConverterTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D87124A0A493F1EFE2AFB4EDBDA784FB /* Pods-Currency ConverterTests-dummy.m */; };
 		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1397E5FD0A3E3A7A1D3DDBD6BA7A7404 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1C9AE10135E055E452BFF7FADE326B66 /* MoveViewJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8028B8DE0F691A6DA4E35FC31FB4247 /* MoveViewJob.swift */; };
 		1D440BC2043125E55794E26A1A8234D8 /* ScatterChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC16258E896B04E80A3B43E5B5662 /* ScatterChartDataSet.swift */; };
@@ -37,7 +38,6 @@
 		2BBC1C57E014127C8A14791A000B224A /* ChartUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D070702542653D27DA65C182E898E2D /* ChartUtils.swift */; };
 		2D53683F3CD3086FDE356172B0735EA7 /* CombinedChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795EB99CC9C6AE10C4621AF7C922BBDC /* CombinedChartData.swift */; };
 		2E4D314618B62AF4880C3721C15F5DC9 /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C5CC3544D914382841636224BF0DB /* Description.swift */; };
-		31AA497B4719FD17A1EAD741F2CAE86D /* Pods-Currency ConverterTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4677062B3109358733E87B31E5AE97A7 /* Pods-Currency ConverterTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32EEE3A9751AACC2D8BD3D6FC6425770 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0203FCF2E38F9E0B8C4E69853543A3E /* QuartzCore.framework */; };
 		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EDA26E59157409C835A08C145D75B8 /* TaskDelegate.swift */; };
 		3892407590F7B7AAAA487B421A0869F4 /* RadarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE14E7FB52D44CF234C0EDBCDAB43C36 /* RadarChartView.swift */; };
@@ -115,7 +115,6 @@
 		A04BFC558D69E7DBB68023C80A9CFE4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32878090C4B2B93381956161EC0930 /* Foundation.framework */; };
 		A13B63777A43FD17075A5A9849195FBC /* IAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760E2D88E78F44A8C855E9C569A214E1 /* IAxisValueFormatter.swift */; };
 		A171ACCD52BE4FFFDBB4510B61DFDB71 /* BubbleChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206C5D5F2E7EEA0A4917E34378C20E50 /* BubbleChartRenderer.swift */; };
-		A19D9D2D8DE40887017D38FA406858F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32878090C4B2B93381956161EC0930 /* Foundation.framework */; };
 		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2848CFBB958B76A46A54043CA0B056 /* NetworkReachabilityManager.swift */; };
 		A5EAB9B530B4916A475BE136760CBDDB /* HorizontalBarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810EFD88CC3B9D7ECE4A75FC41B75B05 /* HorizontalBarChartView.swift */; };
 		A8011934F1A86A9DB1DFAA32F1FE1D7B /* CombinedChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256F88A192CBF58FCCC80A0387B7C71D /* CombinedChartDataProvider.swift */; };
@@ -141,6 +140,7 @@
 		BCD095A51B90EF3D3E42CAEB910821C6 /* AnimatedViewPortJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65FA5002C9BDF2C692C6B4828A8110 /* AnimatedViewPortJob.swift */; };
 		BD7DE3DAB3F143AA73297D6025D080AB /* IBarLineScatterCandleBubbleChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93249529A49C8225577F858E497B6D3B /* IBarLineScatterCandleBubbleChartDataSet.swift */; };
 		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9119A93C4650B37FF93A3345489013B7 /* ParameterEncoding.swift */; };
+		BEA9A773F900A0508AE72BBC0BDC03AE /* Pods-Currency ConverterTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4677062B3109358733E87B31E5AE97A7 /* Pods-Currency ConverterTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BEB394ED883E7A5A8C2918C910CB7521 /* Legend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88504ECB435889CC270D90387BFDB1D8 /* Legend.swift */; };
 		C127C7423C507E88446D44D7E8C5359F /* ChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C979A16984883BFA445A8B0827647EF /* ChartDataProvider.swift */; };
 		C231DC3CD5B2A8CD0036E986271F2F5B /* CandleChartDataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D80ABA567E022FE33EA5357B151038 /* CandleChartDataEntry.swift */; };
@@ -161,7 +161,6 @@
 		DB33AED9998B1903B316A64670148A2A /* LegendEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BB695190BFB4E95AB7375131D24AD5 /* LegendEntry.swift */; };
 		E044F846F0071F36BB8A98EE70C51A7C /* ViewPortJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6728D3B2231BB30A2B5E9C57D0EB40CE /* ViewPortJob.swift */; };
 		E48DDEE9635DA42901E2C27705AE610E /* IBarChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66EEE7B4610DAEB59807B884FD7CEF2 /* IBarChartDataSet.swift */; };
-		E6C8E49D31B03F5DC4C3F7C70D18A8AE /* Pods-Currency ConverterTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D87124A0A493F1EFE2AFB4EDBDA784FB /* Pods-Currency ConverterTests-dummy.m */; };
 		E85CB8AC64D9EA571C5D98A8391AD703 /* XAxisRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981F66C9E247DAC0905319FB36372DCD /* XAxisRenderer.swift */; };
 		E98E03457C835857DD5225E868683257 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4F32D7A81ACED29D3F84CB310715A /* Renderer.swift */; };
 		EAA818F8D74B798F159E7D77D2E2817E /* XAxisRendererRadarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BD61EBE1997EFE4E1951DE8BA18E56 /* XAxisRendererRadarChart.swift */; };
@@ -175,6 +174,7 @@
 		F06D79CEC2584B0B69E2146182CBC8BB /* IMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AEBFF4F58B89985F8455F895D1E08 /* IMarker.swift */; };
 		F098F6603287E1CB29D5584E85738379 /* IRadarChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B2DB096AB807306EE3C0794C2EF4C8 /* IRadarChartDataSet.swift */; };
 		F121CD402070345B079E5BBDF4D3A762 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 626812E7ADBD5B8AC148F7220D9BC8E4 /* SVRadialGradientLayer.m */; };
+		F3479208AF2A4D2A07756DA9AEB176D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32878090C4B2B93381956161EC0930 /* Foundation.framework */; };
 		F512C65E075972476EFAAF2E88F1B4A9 /* LineChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76388E1676A6862A21CDEBAEF090FE98 /* LineChartDataProvider.swift */; };
 		F580AE5D5960BE7E37A01263DFC1E05D /* ChartLimitLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EE6999C20909392367847D33EA1F87 /* ChartLimitLine.swift */; };
 		F58448777F26D703F930C55AFC64951D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32878090C4B2B93381956161EC0930 /* Foundation.framework */; };
@@ -200,7 +200,7 @@
 			remoteGlobalIDString = 88E9EC28B8B46C3631E6B242B50F4442;
 			remoteInfo = Alamofire;
 		};
-		5EAB518B57BA4F96AB49D0F79AD2949F /* PBXContainerItemProxy */ = {
+		64E912C47995A8355A6D25EFF7C1D710 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -222,6 +222,13 @@
 			remoteInfo = Charts;
 		};
 		BACCF8237F2EF20DB51FD1FF99629DC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9C07FBF7E74DB79D2FD312CECCDE5BB;
+			remoteInfo = MarqueeLabel;
+		};
+		CB534405E2327363D1498885523C36DD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -458,6 +465,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		728F1A2A05BF3A76CD6E50B69087715A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3479208AF2A4D2A07756DA9AEB176D1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		99195E4207764744AEC07ECCBCD550EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -473,14 +488,6 @@
 				F58448777F26D703F930C55AFC64951D /* Foundation.framework in Frameworks */,
 				0BD3DDD09E5E965EDC0743EF8D477C48 /* QuartzCore.framework in Frameworks */,
 				81924FA439DC05C859A459001984E8B3 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C0C6A84FFDC2B9BFCC9DDE93A2104F10 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A19D9D2D8DE40887017D38FA406858F5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -920,11 +927,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C4FC5F613CC75400AE578C4839F27DA4 /* Headers */ = {
+		F91FC0B17CE5D61BF5FC46AEFD2D56BE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31AA497B4719FD17A1EAD741F2CAE86D /* Pods-Currency ConverterTests-umbrella.h in Headers */,
+				BEA9A773F900A0508AE72BBC0BDC03AE /* Pods-Currency ConverterTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -939,18 +946,19 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		331F9254FC1AE40AA5B6AFCE90EE961F /* Pods-Currency ConverterTests */ = {
+		8774A78888C037D6E920318705449D24 /* Pods-Currency ConverterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC485397119A15929389401F3D26DD6D /* Build configuration list for PBXNativeTarget "Pods-Currency ConverterTests" */;
+			buildConfigurationList = 05C97A6881CBFDBE4B50E5A550BFB1C7 /* Build configuration list for PBXNativeTarget "Pods-Currency ConverterTests" */;
 			buildPhases = (
-				BF7EA801D2E752A796BA8209C0B4FB38 /* Sources */,
-				C0C6A84FFDC2B9BFCC9DDE93A2104F10 /* Frameworks */,
-				C4FC5F613CC75400AE578C4839F27DA4 /* Headers */,
+				5A64BD8F0D75143226B159879C6692CB /* Sources */,
+				728F1A2A05BF3A76CD6E50B69087715A /* Frameworks */,
+				F91FC0B17CE5D61BF5FC46AEFD2D56BE /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7746816CF44FFA51193565872CD077FA /* PBXTargetDependency */,
+				7B5619447B2CDFDC46DD9DCF3E0345B5 /* PBXTargetDependency */,
+				1C5FCCD6A35E3425968E1E0C1BFDCE1C /* PBXTargetDependency */,
 			);
 			name = "Pods-Currency ConverterTests";
 			productName = "Pods-Currency ConverterTests";
@@ -1072,7 +1080,7 @@
 				F307B842FF76B2DE6C55DB67C0885325 /* Charts */,
 				F9C07FBF7E74DB79D2FD312CECCDE5BB /* MarqueeLabel */,
 				E95613AA8D114EB7582A1AAF40B46460 /* Pods-Currency Converter */,
-				331F9254FC1AE40AA5B6AFCE90EE961F /* Pods-Currency ConverterTests */,
+				8774A78888C037D6E920318705449D24 /* Pods-Currency ConverterTests */,
 				A490F453451A702D9588DE558522456E /* SVProgressHUD */,
 			);
 		};
@@ -1124,6 +1132,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5A64BD8F0D75143226B159879C6692CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				190F587CC0BDB3952E997BCCF184C197 /* Pods-Currency ConverterTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6C15CE7FDD803174E961E6322E7352C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1141,14 +1157,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				89C137B636C819BEA51DE41A6EEA8402 /* Pods-Currency Converter-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF7EA801D2E752A796BA8209C0B4FB38 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E6C8E49D31B03F5DC4C3F7C70D18A8AE /* Pods-Currency ConverterTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1309,17 +1317,23 @@
 			target = 88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */;
 			targetProxy = 4E09D51BF2C6220C1D5F624C15AE634E /* PBXContainerItemProxy */;
 		};
+		1C5FCCD6A35E3425968E1E0C1BFDCE1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MarqueeLabel;
+			target = F9C07FBF7E74DB79D2FD312CECCDE5BB /* MarqueeLabel */;
+			targetProxy = CB534405E2327363D1498885523C36DD /* PBXContainerItemProxy */;
+		};
 		253621107E5CCBA503E7CF8548C6542A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Charts;
 			target = F307B842FF76B2DE6C55DB67C0885325 /* Charts */;
 			targetProxy = B0FCEDD6F014FFD22DB92B992D904DF5 /* PBXContainerItemProxy */;
 		};
-		7746816CF44FFA51193565872CD077FA /* PBXTargetDependency */ = {
+		7B5619447B2CDFDC46DD9DCF3E0345B5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Alamofire;
 			target = 88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */;
-			targetProxy = 5EAB518B57BA4F96AB49D0F79AD2949F /* PBXContainerItemProxy */;
+			targetProxy = 64E912C47995A8355A6D25EFF7C1D710 /* PBXContainerItemProxy */;
 		};
 		EA98904D401075B8AEF9F37A9CEE4304 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1437,41 +1451,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		26E28B3DF7F7E841E3D76CB34BE7DAC1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78FA41784A2068B64B86AED2D6787070 /* Pods-Currency ConverterTests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Currency ConverterTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Currency ConverterTests/Pods-Currency ConverterTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Currency_ConverterTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		313B399B5BCB99336D7D9EFF03226956 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1616,6 +1595,41 @@
 			};
 			name = Release;
 		};
+		791C6FD587A3A45EE10AFB87E1CDDA51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78FA41784A2068B64B86AED2D6787070 /* Pods-Currency ConverterTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Currency ConverterTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Currency ConverterTests/Pods-Currency ConverterTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Currency_ConverterTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		96484A8F3D256017DB0DE57A3CBB90EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6155A1D4F60935717F50968018DA6332 /* MarqueeLabel.xcconfig */;
@@ -1648,7 +1662,7 @@
 			};
 			name = Release;
 		};
-		A59808153021C69F0650B91E920CB4AC /* Debug */ = {
+		AE9C3642F2BA7466D0AF64DF579B80A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 060511F7FE029955622A00E88EE265F8 /* Pods-Currency ConverterTests.debug.xcconfig */;
 			buildSettings = {
@@ -1817,6 +1831,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		05C97A6881CBFDBE4B50E5A550BFB1C7 /* Build configuration list for PBXNativeTarget "Pods-Currency ConverterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE9C3642F2BA7466D0AF64DF579B80A5 /* Debug */,
+				791C6FD587A3A45EE10AFB87E1CDDA51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1867,15 +1890,6 @@
 			buildConfigurations = (
 				E33A795DB32AE5F47B1139F407A2AB3E /* Debug */,
 				FA704F789A0DAD0ECCAAE41A21318CC6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EC485397119A15929389401F3D26DD6D /* Build configuration list for PBXNativeTarget "Pods-Currency ConverterTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A59808153021C69F0650B91E920CB4AC /* Debug */,
-				26E28B3DF7F7E841E3D76CB34BE7DAC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
