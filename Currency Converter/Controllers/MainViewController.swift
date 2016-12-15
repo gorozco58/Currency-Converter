@@ -74,7 +74,7 @@ class MainViewController: UIViewController {
         
         rateLabel.text = currencies.reduce("") { $0 + "- \($1.symbol): \($1.accumulatedValue) -" }
         
-        let values = currencies.enumerated().map { BarChartDataEntry(x: Double($0), y: Double($1.inversed)) }
+        let values = currencies.enumerated().map { BarChartDataEntry(x: Double($0), y: Double($1.inverted)) }
         ChartsFactory.set(values: values, to: barChartView)
         barChartView.animate(yAxisDuration: 2)
     }

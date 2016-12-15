@@ -16,7 +16,7 @@ class Currency {
     var accumulatedValue: Float {
         return value * quantity
     }
-    var inversed: Float {
+    var inverted: Float {
         return quantity / value
     }
     
