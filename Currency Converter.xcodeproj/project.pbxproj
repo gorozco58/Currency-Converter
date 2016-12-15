@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1AD936259FF107C4250A77CD /* Pods_Currency_ConverterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5DBC35F832B23F8F973D5D9 /* Pods_Currency_ConverterTests.framework */; };
-		21E604FEF169E03DE23A9E4F /* Pods_Currency_Converter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DC88AFAB702C0299AA8D0A /* Pods_Currency_Converter.framework */; };
 		8857D9D11E00C2D500237897 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857D9D01E00C2D500237897 /* FontHelper.swift */; };
 		886376101E0186ED00E9F9F3 /* CurrencyChartViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8863760F1E0186ED00E9F9F3 /* CurrencyChartViewUITests.swift */; };
 		8870FDF51E034211004F2124 /* MainViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870FDF41E034211004F2124 /* MainViewControllerTestCase.swift */; };
@@ -73,8 +71,6 @@
 		88EB93701DFF2321007A37D4 /* AlamofireRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireRouter.swift; sourceTree = "<group>"; };
 		88EB93721DFF244A007A37D4 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		88FFB7A21E01787700248671 /* CurrencyModelsTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyModelsTestCase.swift; sourceTree = "<group>"; };
-		C5DBC35F832B23F8F973D5D9 /* Pods_Currency_ConverterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Currency_ConverterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7DC88AFAB702C0299AA8D0A /* Pods_Currency_Converter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Currency_Converter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +78,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21E604FEF169E03DE23A9E4F /* Pods_Currency_Converter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +85,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AD936259FF107C4250A77CD /* Pods_Currency_ConverterTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,8 +101,6 @@
 		6462695A780F31689CADEA2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D7DC88AFAB702C0299AA8D0A /* Pods_Currency_Converter.framework */,
-				C5DBC35F832B23F8F973D5D9 /* Pods_Currency_ConverterTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
