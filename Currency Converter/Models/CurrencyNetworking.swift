@@ -8,33 +8,32 @@
 
 import Foundation
 import Alamofire
+import RxAlamofire
+import RxSwift
 
 protocol CurrencyNetworkingType {
   
-    static func getCurrencies(_ base: Currency, completion: @escaping (Result<[Currency]>) -> Void)
+    static func getCurrencies(_ base: Currency) -> Observable<Result<[Currency]>>
 }
 
 struct CurrencyNetworking : CurrencyNetworkingType {
     
-    static func getCurrencies(_ base: Currency, completion: @escaping (Result<[Currency]>) -> Void) {
+    static func getCurrencies(_ base: Currency) -> Observable<Result<[Currency]>> {
         
-        Alamofire.request(AlamofireRouter.getCurrencies(base: base)).validate().responseJSON { response in
-            
-            switch response.result {
-            case .success(let json):
-                
+        return requestJSON(.get, AlamofireUrl.getCurrencies(base: base))
+            .map { (response, json) -> Result<[Currency]> in
                 guard let jsonData = json as? [String : AnyObject],
                     let possibleCurrencies = jsonData["rates"] as? [String : Float] else {
-                    completion(.failure(CommonError.parsingError))
-                    return
+                        return .failure(CommonError.parsingError)
                 }
                 
                 let currencies = possibleCurrencies.map(Currency.init)
-                completion(.success(currencies))
-                
-            case .failure(_):
-                completion(.failure(CommonError.networkError))
+                return .success(currencies)
             }
+            .catchError { _ in
+                let result = Result<[Currency]>.failure(CommonError.networkError)
+                return Observable.just(result)
         }
     }
 }
+

@@ -63,3 +63,30 @@ enum AlamofireRouter : URLRequestConvertible {
         return urlRequest
     }
 }
+
+enum AlamofireUrl : URLConvertible {
+    
+    static let baseURLString = "http://api.fixer.io/"
+    
+    case getCurrencies(base: Currency)
+    
+    var method: HTTPMethod {
+        switch self {
+        case .getCurrencies:
+            return .get
+        }
+    }
+    
+    var path: String {
+        switch self {
+        case .getCurrencies:
+            return "latest"
+        }
+    }
+    
+    func asURL() throws -> URL {
+        
+        let urlString = AlamofireUrl.baseURLString + "\(path)?base=USD&symbols=GBP,EUR,JPY,BRL"
+        return try urlString.asURL()
+    }
+}

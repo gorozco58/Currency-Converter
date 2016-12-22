@@ -10,6 +10,7 @@ import UIKit
 import SVProgressHUD
 import MarqueeLabel
 import Charts
+import RxSwift
 
 class MainViewController: UIViewController {
 
@@ -19,6 +20,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var barChartView: BarChartView!
     
     //MARK: Private vars
+    private let disposeBag = DisposeBag()
     private(set) var base: Currency
     private(set) var currencies: [Currency] = []
     
@@ -53,21 +55,24 @@ class MainViewController: UIViewController {
     
         SVProgressHUD.show()
         
-        CurrencyNetworking.getCurrencies(base) { [weak self] result in
-            
-            SVProgressHUD.dismiss()
-            
-            switch result {
-            case .success(let currencies):
+        CurrencyNetworking
+            .getCurrencies(base)
+            .subscribe(onNext: { [weak self] result in
                 
-                self?.currencies = currencies
-                self?.reloadData()
+                SVProgressHUD.dismiss()
                 
-            case .failure(let error):
-                
-                self?.show(error: error)
-            }
-        }
+                switch result {
+                case .success(let currencies):
+                    
+                    self?.currencies = currencies
+                    self?.reloadData()
+                    
+                case .failure(let error):
+                    
+                    self?.show(error: error as! CommonError)
+                }
+            })
+        .addDisposableTo(disposeBag)
     }
     
     func reloadData() {
@@ -79,7 +84,7 @@ class MainViewController: UIViewController {
         barChartView.animate(yAxisDuration: 2)
     }
     
-    func show(error: Error) {
+    func show(error: CommonError) {
         SVProgressHUD.showError(withStatus: error.localizedDescription)
     }
 }

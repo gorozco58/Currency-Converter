@@ -4,8 +4,10 @@ use_frameworks!
 def multiple_targets
     
 pod 'MarqueeLabel', '~> 3.0'
-pod 'Alamofire', '~> 4.2'
-    
+pod 'RxAlamofire', '~> 3.0'
+pod 'RxSwift',    '~> 3.0'
+pod 'RxCocoa',    '~> 3.0'
+
 end
 
 target 'Currency Converter' do
