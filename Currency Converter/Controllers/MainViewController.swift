@@ -52,14 +52,15 @@ class MainViewController: UIViewController {
     
     //MARK: - Utils
     func loadCurrencies() {
-    
+        
         SVProgressHUD.show()
         
         CurrencyNetworking
             .getCurrencies(base)
-            .subscribe(onNext: { [weak self] result in
-                
+            .do(onNext: { _ in
                 SVProgressHUD.dismiss()
+            })
+            .subscribe(onNext: { [weak self] result in
                 
                 switch result {
                 case .success(let currencies):
@@ -69,10 +70,10 @@ class MainViewController: UIViewController {
                     
                 case .failure(let error):
                     
-                    self?.show(error: error as! CommonError)
+                    self?.show(error: error)
                 }
             })
-        .addDisposableTo(disposeBag)
+            .addDisposableTo(disposeBag)
     }
     
     func reloadData() {
@@ -84,7 +85,7 @@ class MainViewController: UIViewController {
         barChartView.animate(yAxisDuration: 2)
     }
     
-    func show(error: CommonError) {
+    func show(error: Error) {
         SVProgressHUD.showError(withStatus: error.localizedDescription)
     }
 }
