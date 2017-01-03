@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let base = Currency(dictionary: (key: "INVALID", value: 1))
+        let base = Currency(dictionary: (key: "USD", value: 1))
         SVProgressHUD.setDefaultMaskType(.gradient)
         
         window = UIWindow(frame: UIScreen.main.bounds)

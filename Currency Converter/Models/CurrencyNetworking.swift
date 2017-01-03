@@ -44,16 +44,3 @@ struct CurrencyNetworking : CurrencyNetworkingType {
         return observable.asObservable()
     }
 }
-
-struct NopDisposable : Disposable {
-    
-    fileprivate static let noOp: Disposable = NopDisposable()
-    
-    fileprivate init() {
-        
-    }
-    
-    /// Does nothing.
-    public func dispose() {
-    }
-}

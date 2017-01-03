@@ -8,11 +8,13 @@
 
 import XCTest
 import Alamofire
+import RxSwift
 @testable import Currency_Converter
 
 class CurrencyModelsTestCase: XCTestCase {
 
     let timeout: TimeInterval = 30.0
+    let disposeBag = DisposeBag()
     
     override func setUp() {
         super.setUp()
@@ -32,10 +34,13 @@ class CurrencyModelsTestCase: XCTestCase {
         var result: Result<[Currency]>? = nil
         
         // When
-        CurrencyNetworking.getCurrencies(base) { response in
-            result = response
-            expectation.fulfill()
-        }
+        CurrencyNetworking
+            .getCurrencies(base)
+            .subscribe(onNext: { response in
+                result = response
+                expectation.fulfill()
+            })
+            .addDisposableTo(disposeBag)
         
         waitForExpectations(timeout: timeout, handler: nil)
         
@@ -54,10 +59,13 @@ class CurrencyModelsTestCase: XCTestCase {
         var result: Result<[Currency]>? = nil
         
         // When
-        CurrencyNetworking.getCurrencies(base) { response in
-            result = response
-            expectation.fulfill()
-        }
+        CurrencyNetworking
+            .getCurrencies(base)
+            .subscribe(onNext: { response in
+                result = response
+                expectation.fulfill()
+            })
+            .addDisposableTo(disposeBag)
         
         waitForExpectations(timeout: timeout, handler: nil)
         
